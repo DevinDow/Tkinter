@@ -14,6 +14,7 @@ text2.pack()
 
 # Create a button
 def onButton():
+  print("Button Clicked!")
   # use a Toplevel widget to display an image in a new window
   window = Toplevel(root)
   window.title("Clicked")
