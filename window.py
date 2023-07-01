@@ -12,4 +12,15 @@ text.pack()
 text2 = Label(root, text="- Maya Angelou")
 text2.pack()
 
+# Create a button
+def onButton():
+  # use a Toplevel widget to display an image in a new window
+  window = Toplevel(root)
+  window.title("Clicked")
+  text3 = Label(window, text="Button Clicked")
+  text3.pack()
+
+button = Button(root, text="Hi", command=onButton)
+button.pack()
+
 root.mainloop()
