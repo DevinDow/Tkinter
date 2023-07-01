@@ -1,4 +1,6 @@
 from tkinter import *
+from tkinter import messagebox
+
 
 root = Tk() # create root widget
 root.title("Hello, World")
@@ -15,11 +17,8 @@ text2.pack()
 # Create a button
 def onButton():
   print("Button Clicked!")
-  # use a Toplevel widget to display an image in a new window
-  window = Toplevel(root)
-  window.title("Clicked")
-  text3 = Label(window, text="Button Clicked")
-  text3.pack()
+  messagebox.askokcancel(title="Button Clicked", message="Are you sure?")
+
 
 button = Button(root, text="Hi", command=onButton)
 button.pack()
